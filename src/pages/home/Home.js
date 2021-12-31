@@ -28,13 +28,13 @@ const Home = () => {
 
     return (
         <div>
-            {art.map((art)=>{
+            {art && art.map((art)=>{
                 return (
                     <>
                         <div className="art-container">
                             <ul className="art-body">
                                 <h2>Title:</h2>
-                                <h2><Link to={`/objectInfo/${art.id}`}>{art.title}</Link></h2>
+                                <h2><Link to={`/objectInfo/${art.objectNumber}`}>{art.title}</Link></h2>
                                 <h3>image:</h3>
                                 <img src={art.webImage.url} alt="art-image" width="250px"/>
                                 <h4>ID: </h4>
