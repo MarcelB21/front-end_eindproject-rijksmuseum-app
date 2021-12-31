@@ -2,6 +2,7 @@
 import './App.css';
 import {Route, Switch} from "react-router-dom";
 import Home from "./pages/home/Home";
+import ObjectInfo from "./pages/objectinfo/ObjectInfo";
 
 function App() {
   return (
@@ -10,6 +11,10 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
+
+          <Route path="/objectinfo/:id">
+              <ObjectInfo/>
+          </Route>
       </Switch>
     </div>
   );
