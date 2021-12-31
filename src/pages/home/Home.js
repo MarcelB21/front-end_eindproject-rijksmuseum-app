@@ -1,6 +1,8 @@
 import './Home.css';
 import React, {useEffect, useState} from "react";
 import axios from "axios";
+import {Link} from "react-router-dom";
+
 
 const Home = () => {
 
@@ -32,7 +34,7 @@ const Home = () => {
                         <div className="art-container">
                             <ul className="art-body">
                                 <h2>Title:</h2>
-                                <a>{art.title}</a>
+                                <h2><Link to={`/objectInfo/${art.id}`}>{art.title}</Link></h2>
                                 <h3>image:</h3>
                                 <img src={art.webImage.url} alt="art-image" width="250px"/>
                                 <h4>ID: </h4>

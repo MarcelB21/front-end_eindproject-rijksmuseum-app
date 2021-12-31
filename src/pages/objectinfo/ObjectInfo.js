@@ -1,18 +1,23 @@
 import './ObjectInfo.css';
-import React from 'react';
+import React, {useEffect} from 'react';
 import axios from "axios";
+import {useParams} from "react-router-dom";
 
 const ObjectInfo = () => {
 
-    async function getObjectInfo() {
-        try {
-            const result = await axios.get(`https://www.rijksmuseum.nl/api/nl/collection/SK-C-597`);
-            console.log(result);
-        } catch (e) {
-            console.error(e);
+    const { id } = useParams()
+
+    useEffect(() => {
+        async function getObjectInfo() {
+            try {
+                const result = await axios.get(`https://www.rijksmuseum.nl/api/nl/collection/${id}`);
+                console.log(result);
+            } catch (e) {
+                console.error(e);
+            }
         }
-    }
-    getObjectInfo()
+        getObjectInfo()
+    }, [])
 
 
     return (
