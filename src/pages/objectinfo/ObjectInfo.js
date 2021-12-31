@@ -5,12 +5,13 @@ import {useParams} from "react-router-dom";
 
 const ObjectInfo = () => {
 
+    const apiKey = 'IofFTSpv';
     const { id } = useParams()
 
     useEffect(() => {
         async function getObjectInfo() {
             try {
-                const result = await axios.get(`https://www.rijksmuseum.nl/api/nl/collection/${id}`);
+                const result = await axios.get(`https://www.rijksmuseum.nl/api/nl/collection/${id}?key=${apiKey}`);
                 console.log(result);
             } catch (e) {
                 console.error(e);
