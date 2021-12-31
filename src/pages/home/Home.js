@@ -1,15 +1,17 @@
 import './Home.css';
 import React from "react";
-
+import axios from "axios";
 
 const Home = () => {
 
-
-    try {
-    } catch (e) {
-        console.error(e);
+    async function fetchData() {
+        try {
+            const result = await axios.get();
+        } catch (e) {
+            console.error(e);
+        }
     }
-
+    fetchData()
 
 return (
     <div>
