@@ -2,8 +2,17 @@ import './ObjectInfo.css';
 import React from 'react';
 
 const ObjectInfo = () => {
-    return (
 
+    try {
+
+    } catch (e) {
+        console.error(e);
+    }
+
+    return (
+        <div>
+
+        </div>
     );
 };
 
