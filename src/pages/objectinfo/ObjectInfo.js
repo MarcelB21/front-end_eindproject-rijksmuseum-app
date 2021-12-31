@@ -1,12 +1,15 @@
 import './ObjectInfo.css';
 import React from 'react';
+import axios from "axios";
 
 const ObjectInfo = () => {
 
-    try {
-
-    } catch (e) {
-        console.error(e);
+    async function getObjectInfo() {
+        try {
+            const result = await axios.get(``)
+        } catch (e) {
+            console.error(e);
+        }
     }
 
     return (
