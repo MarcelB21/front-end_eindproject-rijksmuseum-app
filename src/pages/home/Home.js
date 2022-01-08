@@ -1,5 +1,5 @@
 import './Home.css';
-import React, {useEffect, useState} from "react";
+import React, {Fragment, useEffect, useState} from "react";
 import axios from "axios";
 import {Link} from "react-router-dom";
 
@@ -28,9 +28,9 @@ const Home = () => {
 
     return (
         <div>
-            {art && art.map((art)=>{
+            {art && art.map((art, index)=>{
                 return (
-                    <>
+                    <Fragment key={index}>
                         <div className="art-container">
                             <ul className="art-body">
                                 <h2>Title:</h2>
@@ -41,7 +41,7 @@ const Home = () => {
                                 <p>{art.id}</p>
                             </ul>
                         </div>
-                    </>
+                    </Fragment>
                 )
             })}
         </div>
