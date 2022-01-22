@@ -47,7 +47,8 @@ const Home = () => {
 
     return (
         <div>
-            <div>
+            <body>
+            <header id="header" className="pageSize">
                 <p>{pageSize} kunstobjecten op de pagina</p>
                 <p>
                     <button type="button" onClick={handleDecrease} disabled={pageSize<11}>
@@ -57,7 +58,8 @@ const Home = () => {
                         klik om te vermeerderen
                     </button>
                 </p>
-            </div>
+            </header>
+            <main>
             {art && art.map((art, index)=>{
                 return (
                     <Fragment key={index}>
@@ -74,7 +76,9 @@ const Home = () => {
                     </Fragment>
                 )
             })}
-            <div>
+            </main>
+            <footer id="footer" className="pageNumber">
+                <p>paginanr. = {pageNumber}  </p>
                 <p>
                     <button disabled={pageNumber<2} onClick={prevPage}>
                         Vorige pagina
@@ -83,7 +87,8 @@ const Home = () => {
                         Volgende pagina
                     </button>
                 </p>
-            </div>
+            </footer>
+            </body>
         </div>
     );
 };
