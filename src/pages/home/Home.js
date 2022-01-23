@@ -2,6 +2,8 @@ import './Home.css';
 import React, {Fragment, useEffect, useState} from "react";
 import axios from "axios";
 import {Link, useHistory} from "react-router-dom";
+import Button from "../../compontents/button/Button";
+
 
 
 const Home = () => {
@@ -50,14 +52,16 @@ const Home = () => {
             <body>
             <header id="header" className="pageSize">
                 <p>{pageSize} kunstobjecten op de pagina</p>
-                <p>
-                    <button type="button" onClick={handleDecrease} disabled={pageSize<11}>
-                        Klik om te verminderen
-                    </button>
-                    <button type="button" onClick={handleIncrease} disabled={pageSize>99}>
-                        klik om te vermeerderen
-                    </button>
-                </p>
+                    <Button
+                        onClick={handleDecrease}
+                        disabled={pageSize<11}
+                        title="Klik om te verminderen"
+                    />
+                    <Button
+                        onClick={handleIncrease}
+                        disabled={pageSize>99}
+                        title="klik om te vermeerderen"
+                    />
             </header>
             <main>
             {art && art.map((art, index)=>{
@@ -79,14 +83,16 @@ const Home = () => {
             </main>
             <footer id="footer" className="pageNumber">
                 <p>paginanr. = {pageNumber}  </p>
-                <p>
-                    <button disabled={pageNumber<2} onClick={prevPage}>
-                        Vorige pagina
-                    </button>
-                    <button onClick={nextPage}>
-                        Volgende pagina
-                    </button>
-                </p>
+                    <Button
+                        onClick={prevPage}
+                        disabled={pageNumber<2}
+                        title="Vorige pagina"
+                    />
+                    <Button
+                        onClick={nextPage}
+                        disabled={pageNumber>99}
+                        title="Volgende pagina"
+                    />
             </footer>
             </body>
         </div>

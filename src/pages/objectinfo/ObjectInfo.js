@@ -36,8 +36,8 @@ const ObjectInfo = () => {
         <div>
             <h2>{artInfo && artInfo.data.artObject.label.title}</h2>
             <img src={artInfo && artInfo.data.artObject.webImage.url} alt="art-image" width="500px"/>
-            <h4>discription: {artInfo && artInfo.data.artObject.label.description}</h4>
-            <h4>objectTypes: </h4>
+            <h4>Omschrijving: {artInfo && artInfo.data.artObject.label.description}</h4>
+            <h4>Kunstwerktype(s): </h4>
             {artObjectInfo(art)}
         </div>
     );
