@@ -31,6 +31,32 @@ const Home = () => {
         setPageNumber(pageNumber +1)
     }
 
+    const showOnPx = 100;
+    const backToTopButton = document.querySelector(".back-to-top")
+
+    const scrollContainer = () => {
+        return document.documentElement || document.body;
+    };
+
+    const goToTop = () => {
+        document.body.scrollIntoView({
+            behavior: "smooth",
+        });
+    };
+
+    backToTopButton.addEventListener("click", goToTop)
+
+
+
+    document.addEventListener("scroll", () => {
+        if (scrollContainer().scrollTop > showOnPx) {
+            backToTopButton.classList.remove("hidden")
+        } else {
+            backToTopButton.classList.add("hidden")
+        }
+    })
+
+
     useEffect(() => {
         async function fetchData() {
             try {
@@ -93,6 +119,10 @@ const Home = () => {
                         disabled={pageNumber>99}
                         title="Volgende pagina"
                     />
+                <Button
+                    className="back-to-top hidden"
+                    title="Terug naar boven"
+                />
             </footer>
             </body>
         </div>
