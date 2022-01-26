@@ -44,9 +44,6 @@ const Home = () => {
         });
     };
 
-    backToTopButton.addEventListener("click", goToTop)
-
-
 
     document.addEventListener("scroll", () => {
         if (scrollContainer().scrollTop > showOnPx) {
@@ -120,6 +117,7 @@ const Home = () => {
                         title="Volgende pagina"
                     />
                 <Button
+                    onClick={goToTop}
                     className="back-to-top hidden"
                     title="Terug naar boven"
                 />
