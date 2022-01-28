@@ -48,7 +48,7 @@ const Search = () => {
     }
 
     useEffect(() => {
-        async function fetchData() {
+        async function dynamicSearchData() {
             try {
                 const result = await axios.get(`https://www.rijksmuseum.nl/api/nl/collection?key=${apiKey}&p=${pageNumber}&ps=${pageSize}&involvedMaker=${involvedMaker}&imgOnly=${imgOnly}&topPieces=${topPieces}`);
                 console.log(result);
@@ -58,7 +58,7 @@ const Search = () => {
                 console.error(e);
             }
         }
-        fetchData();
+        dynamicSearchData();
     }, [pageSize, pageNumber]);
 
 
@@ -189,7 +189,6 @@ return (
                 <option value="Adriaen+van+Wesel">W-1 = Wesel, Adriaen van</option>
                 {/*kunstenaars met de letter X*/}
                 <option value="Jan+Baptist+Xavery">X-1 = Xavery, Jan Baptist</option>
-
             </select>
             <select name="image-only" id="image-only" value={imgOnly} onChange={(event) => setImgOnly(event.target.value)}>
                 <option value="false">alles</option>
