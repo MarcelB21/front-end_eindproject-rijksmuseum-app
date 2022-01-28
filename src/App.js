@@ -7,6 +7,7 @@ import SignIn from "./pages/signin/SignIn";
 import SignUp from "./pages/signup/SignUp";
 import {useContext} from "react";
 import {AuthContext} from "./context/AuthContext";
+import Search from "./pages/search/Search";
 
 
 function App() {
@@ -25,6 +26,9 @@ function App() {
               <Route path="/profile">
                   {auth? <Profile /> : <Redirect to="/signIn"/>}
               </Route>
+          <Route path="/search">
+              <Search />
+          </Route>
               <Route exact path="/signin">
                   <SignIn />
               </Route>

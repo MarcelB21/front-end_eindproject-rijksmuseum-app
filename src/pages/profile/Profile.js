@@ -40,11 +40,12 @@ function Profile() {
             </section>
             <section>
                 <h2>Strikt geheime profiel-content</h2>
-                <h2>{profileData.title}</h2>
-                <p>{profileData.content}</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias cum debitis dolor dolore fuga id molestias qui quo unde?</p>
+                <p>Je kunt op deze webpagina twee kanten op:</p>
+                <ul>
+                    <li>je kunt naar de kunst-collectie gaan en daar kunst bekijken, houdt er rekening mee dat je max 100 pagina's kunt bekijken en er maximaal 100 kunstobjecten per pagina zijn: <p>Link naar de <Link to="/">Kunst-collectie</Link></p></li>
+                    <li>je kunt naar de zoekpagina gaan en daar per kunstenaar bekijken wat de kunstenaar gemaakt heeft. <p>Link naar de <Link to="/search">Zoekpagina</Link></p></li>
+                </ul>
             </section>
-            <p>Terug naar de <Link to="/">Homepagina</Link></p>
         </>
     );
 }
