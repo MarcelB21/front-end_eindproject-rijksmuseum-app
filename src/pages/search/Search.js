@@ -2,6 +2,7 @@ import './Search.css';
 import React, {useEffect, useState} from "react";
 import axios from "axios";
 import Button from "../../compontents/button/Button";
+import {Link} from "react-router-dom";
 
 const apiKey = 'IofFTSpv';
 
@@ -47,8 +48,7 @@ const Search = () => {
     }
 
     useEffect(() => {
-        async function fetchData(event) {
-            event.preventDefault();
+        async function fetchData() {
             try {
                 const result = await axios.get(`https://www.rijksmuseum.nl/api/nl/collection?key=${apiKey}&p=${pageNumber}&ps=${pageSize}&involvedMaker=${involvedMaker}&imgOnly=${imgOnly}&topPieces=${topPieces}`);
                 console.log(result);
@@ -216,9 +216,11 @@ return (
 
         <ul>
             {artObjects.length > 0 && artObjects.map((artObject) => {
-                return <li>
-                    <h2>{artObject.title}</h2>
+                return <li key={artObject.objectNumber}>
+                    <h2><Link to={`/objectInfo/${artObject.objectNumber}`}>{artObject.title}</Link></h2>
                     <p>{artObject.objectNumber}</p>
+                    <h3>image:</h3>
+                    {artObject.webImage !== null? <img src={artObject.webImage.url} alt="art-image" width="300px"/> : ''}
                 </li>
             })}
         </ul>
