@@ -40,7 +40,7 @@ const AuthContextProvider = ({children}) => {
 
     async function getUserData(id, token, redirect) {
         try {
-            const result = await axios.get(`http://localhost:3000/600/users/${id}`,
+            const result = await axios.get(`https://frontend-educational-backend.herokuapp.com/api/user`,
                 {
                     headers: {
                         "Content-Type": "application/json",

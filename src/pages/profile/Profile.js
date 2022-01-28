@@ -13,17 +13,17 @@ function Profile() {
         async function fetchProfileData() {
             const token = localStorage.getItem('token')
             try{
-                const result = await axios.get('http:localhost:3000/660/private-content',
+                const result = await axios.get('https://frontend-educational-backend.herokuapp.com/api/user',
                     {
                         headers: {
                             "Content-Type": "application/json",
                             Authorization: `Bearer ${token}`
                         }
                     })
-                setProfileData(result.data)
-                console.log(result)
+                setProfileData(result.data);
+                console.log(result);
             } catch (e) {
-                console.log(e)
+                console.log(e);
             }
         }
         fetchProfileData()
@@ -37,6 +37,7 @@ function Profile() {
                 <p><strong>Gebruikersnaam:</strong> {user.username}</p>
                 <p><strong>Email:</strong> {user.email}</p>
                 <p><strong>id:</strong>{user.id}</p>
+                <p><strong>roles:</strong>{user.role}</p>
             </section>
             <section>
                 <h2>Strikt geheime profiel-content</h2>

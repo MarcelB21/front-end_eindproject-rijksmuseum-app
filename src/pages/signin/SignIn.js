@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 import {AuthContext} from "../../context/AuthContext";
 import axios from "axios";
 
@@ -7,20 +7,23 @@ import axios from "axios";
 function SignIn() {
     const { login } = useContext(AuthContext);
 
-    const [ email, setEmail ] = useState('')
+    const [ user, setUser ] = useState('')
     const [ password, setPassword ] = useState('')
+
+    const history = useHistory()
 
     async function handleSubmit(e){
         e.preventDefault();
 
-        console.log(email, password)
+        console.log(user, password)
         try {
-            const result = await axios.post('http://localhost:3000/login',
+            const result = await axios.post('https://frontend-educational-backend.herokuapp.com/api/auth/signin',
                 {
-                    email: email,
+                    username: user,
                     password: password,
                 });
             console.log(result.data);
+            history.push("/")
             login(result.data.accessToken);
         } catch (e) {
             console.error(e);
@@ -33,14 +36,14 @@ function SignIn() {
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias cum debitis dolor dolore fuga id molestias qui quo unde?</p>
 
             <form onSubmit={handleSubmit}>
-                <label htmlFor="email">
+                <label htmlFor="user">
                     Emailadress:
                     <input
-                        id="email"
-                        type="email"
-                        name="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+                        id="user"
+                        type="text"
+                        name="user"
+                        value={user}
+                        onChange={(e) => setUser(e.target.value)}
                     />
                 </label>
                 <label htmlFor="password">

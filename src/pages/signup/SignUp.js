@@ -17,11 +17,12 @@ function SignUp() {
         // login();
 
         try {
-            await axios.post('http://localhost:3000/register',
+            await axios.post('https://frontend-educational-backend.herokuapp.com/api/auth/signup',
                 {
                     email: email,
                     username: username,
                     password: password,
+                    role: ["user"],
                 })
             history.push('/signIn')
 
@@ -34,9 +35,7 @@ function SignUp() {
     return (
         <>
             <h1>Registreren</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur atque consectetur, dolore eaque eligendi
-                harum, numquam, placeat quisquam repellat rerum suscipit ullam vitae. A ab ad assumenda, consequuntur deserunt
-                doloremque ea eveniet facere fuga illum in numquam quia reiciendis rem sequi tenetur veniam?</p>
+            <p>Welkom bij de registratiepagina van het eindproject - Rijksmuseum te Amsterdam</p>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="email">
                     Emailadress:
