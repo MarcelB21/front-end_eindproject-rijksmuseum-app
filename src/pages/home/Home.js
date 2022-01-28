@@ -32,7 +32,7 @@ const Home = () => {
     }
 
     const showOnPx = 100;
-    const backToTopButton = document.querySelector(".back-to-top")
+    let backToTopButton = document.querySelector(".back-to-top");
 
     const scrollContainer = () => {
         return document.documentElement || document.body;

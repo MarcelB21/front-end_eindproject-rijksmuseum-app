@@ -68,7 +68,7 @@ return (
             {/*<input type="text" />*/}
             <select name="involved-maker" id="involved-maker-field" value={involvedMaker} onChange={(event) => setInvolvedMaker(event.target.value)}>
                  {/*kunstenaars met de letter A*/}
-                <option value="Pieter+Aertsen">A-1 = Aertsen, Pieter</option>
+                <option value="Pieter%20Aertsen">A-1 = Aertsen, Pieter</option>
                 <option value="Laurens">A-2 = Alma Tadema, Lawrence</option>
                 <option value="Karel+Appel">A-3 = Appel, Karel</option>
                 <option value="Hendrick+Avercamp">A-4 = Avercamp, Hendrick</option>
@@ -76,11 +76,11 @@ return (
                 <option value="Dirck+van+Baburen">B-01 = Baburen, Dirck van</option>
                 <option value="Ludolf+Bakhuysen">B-02 = Bakhuysen, Ludolf</option>
                 <option value="Nicolaes+Pietersz.+Berchem">B-03 = Berchem, Nicolaes Pietersz.</option>
-                <option value="Joachim+Beuckelaer">B-04 = Beuckelaer, Joachim</option>
+                <option value="Joachim+Bueckelaer">B-04 = Beuckelaer, Joachim</option>
                 <option value="Albert+Gerard+Bilders">B-05 = Bilders, Albert Gerard</option>
                 <option value="Abraham+Bloemaert">B-06 = Bloemaert, Abraham</option>
                 <option value="Ferdinand+Bol">B-07 = Bol, Ferdinand</option>
-                <option value="Gerard+ter+Borch">B-08 = Borch, Gerard ter</option>
+                <option value="Gerard+ter+Borch+(II)">B-08 = Borch, Gerard ter (II)</option>
                 <option value="Jan+Both">B-09 = Both, Jan</option>
                 <option value="André+Charles+Boulle">B-10 = Boulle, André Charles</option>
                 <option value="George+Hendrik+Breitner">B-11 = Breitner, George Hendrik</option>
@@ -96,9 +96,8 @@ return (
                 {/*kunstenaars met de letter D*/}
                 <option value="Herman+Doomer">D-1 = Doomer, Herman</option>
                 <option value="Gerard+Dou">D-2 = Dou, Gerard</option>
-                <option value="Karel+Dujardin">D-3 = Dujardin, Karel</option>
-                <option value="Anthony+van+Dyck">D-4 = Dyck, Anthony van</option>
-                <option value="Albrecht+Dürer">D-5 = Dürer, Albrecht</option>
+                <option value="Anthony+van+Dyck">D-3 = Dyck, Anthony van</option>
+                <option value="Albrecht+Dürer">D-4 = Dürer, Albrecht</option>
                 {/*kunstenaars met de letter E*/}
                 <option value="Gerbrand+van+den+Eeckhout">E-1 = Eeckhout, Gerbrand van den</option>
                 <option value="Caesar+Boëtius+van+Everdingen">E-2 = Everdingen, Caesar Boëtius van</option>
@@ -112,34 +111,28 @@ return (
                 <option value="Giambologna">G-5 = Giambologna</option>
                 <option value="Vincent+van+Gogh">G-6 = Gogh, Vincent van</option>
                 <option value="Hendrick Goltzius">G-7 = Goltzius, Hendrick</option>
-                <option value="Francisco+José+de+Goya+y+Lucientes">G-8 = Goya y Lucientes, Francisco José de</option>
-                <option value="Jan+van+Goyen">G-9 = Goyen, Jan van</option>
+                <option value="Jan+van+Goyen">G-8 = Goyen, Jan van</option>
                 {/*kunstenaars met de letter H*/}
                 <option value="Dirck+Hals">H-01 = Hals, Dirck</option>
                 <option value="Frans+Hals">H-02 = Hals, Frans</option>
                 <option value="Willem+Claesz.+Heda">H-03 = Heda, Willem Claesz.</option>
                 <option value="Jan+Davidsz.+de+Heem">H-04 = Heem, Jan Davidsz. de</option>
                 <option value="Maarten+van+Heemskerck">H-05 = Heemskerck, Maarten van</option>
-
                 <option value="Bartholomeus+van+der+Helst">H-06 = Helst, Bartholomeus van der</option>
                 <option value="Hiroshige%20(I)%20%2C%20Utagawa">H-07 = Utagawa Hiroshige I</option>
                 <option value="Katsushika+Hokusai">H-08 = Hokusai, Katsushika</option>
-                <option value="Melchior+d%27+Hondecoeter">H-09 = Hondecoeter, Melchior d'</option>
-                <option value="Gerard+van+Honthorst">H-10 = Honthorst, Gerard van</option>
-
-                <option value="Pieter+de+Hooch">H-11 = Hooch, Pieter de</option>
+                <option value="Gerard+van+Honthorst">H-09 = Honthorst, Gerard van</option>
+                <option value="Pieter+de+Hooch">H-10 = Hooch, Pieter de</option>
                 {/*kunstenaars met de letter I*/}
                 <option value="Isaac+Israels">I-1 = Israels, Isaac</option>
                 <option value="Jozef+Israëls">I-2 = Israëls, Jozef</option>
                 {/*kunstenaars met de letter J*/}
                 <option value="Wenzel+Jamnitzer">J-1 = Jamnitzer, Wenzel</option>
-                <option value="Jacob+Jordaens+(I)">J-2 = Jordaens, Jacob</option>
                 {/*kunstenaars met de letter K*/}
                 <option value="Adriaen+Thomasz.+Key">K-1 = Key, Adriaen Thomasz.</option>
-                <option value="Hendrik+de+Keyser+(I)">K-2 = Keyser, Hendrik de</option>
-                <option value="Philips+Koninck">K-3 = Koninck, Philips</option>
-                <option value="Willem+Bartel+van+der+Kooi">K-4 = Kooi, Willem Bartel van der</option>
-                <option value="Jan+Adam+Kruseman">K-5 = Kruseman, Jan Adam</option>
+                <option value="Philips+Koninck">K-2 = Koninck, Philips</option>
+                <option value="Willem+Bartel+van+der+Kooi">K-3 = Kooi, Willem Bartel van der</option>
+                <option value="Jan+Adam+Kruseman">K-4 = Kruseman, Jan Adam</option>
                 {/*kunstenaars met de letter L*/}
                 <option value="Gerard+de+Lairesse">L-1 = Lairesse, Gerard de</option>
                 <option value="Ren%C3%A9+Lalique">L-2 = Lalique, Rene Jules</option>
@@ -148,7 +141,6 @@ return (
                 <option value="Lucas+van+Leyden">L-5 = Leyden, Lucas van</option>
                 <option value="Jan+Lievens">L-6 = Lievens, Jan</option>
                 <option value="Jean-Etienne+Liotard">L-7 = Liotard, Jean-Etienne</option>
-                <option value="Johannes+Lutma+(I)">L-8 = Lutma, Johannes</option>
                 {/*kunstenaars met de letter M*/}
                 <option value="Nicolaes+Maes">M-1 = Maes, Nicolaes</option>
                 <option value="Karel+van+Mander">M-2 = Mander, Karel van</option>
@@ -169,8 +161,7 @@ return (
                 <option value="Rembrandt%20van%20Rijn">R-1 = Rembrandt van Rijn</option>
                 <option value="Rembrandt+Harmensz.+van+Rijn">R-2 = Rembrandt Harmensz. van Rijn</option>
                 <option value="Peter+Paul+Rubens">R-3 = Rubens, Peter Paul</option>
-                <option value="Jacob+Isaacksz.+van+Ruisdael">R-4 = Ruisdael, Jacob Isaacksz. van</option>
-                <option value="Salomon+van+Ruysdael">R-5 = Ruysdael, Salomon van</option>
+                <option value="Salomon+van+Ruysdael">R-4 = Ruysdael, Salomon van</option>
                 {/*kunstenaars met de letter S*/}
                 <option value="Pieter+Jansz.+Saenredam">S-1 = Saenredam, Pieter Jansz.</option>
                 <option value="Roelant+Savery">S-2 = Savery, Roelant</option>
