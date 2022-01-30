@@ -31,29 +31,6 @@ const Home = () => {
         setPageNumber(pageNumber +1)
     }
 
-    const showOnPx = 100;
-    let backToTopButton = document.querySelector(".back-to-top");
-
-    const scrollContainer = () => {
-        return document.documentElement || document.body;
-    };
-
-    const goToTop = () => {
-        document.body.scrollIntoView({
-            behavior: "smooth",
-        });
-    };
-
-
-    document.addEventListener("scroll", () => {
-        if (scrollContainer().scrollTop > showOnPx) {
-            backToTopButton.classList.remove("hidden")
-        } else {
-            backToTopButton.classList.add("hidden")
-        }
-    })
-
-
     useEffect(() => {
         async function fetchData() {
             try {
@@ -72,7 +49,7 @@ const Home = () => {
 
     return (
         <div>
-            <body>
+            <Fragment>
             <header id="header" className="pageSize">
                 <p>{pageSize} kunstobjecten op de pagina</p>
                     <Button
@@ -116,13 +93,9 @@ const Home = () => {
                         disabled={pageNumber>99}
                         title="Volgende pagina"
                     />
-                <Button
-                    onClick={goToTop}
-                    className="back-to-top hidden"
-                    title="Terug naar boven"
-                />
+
             </footer>
-            </body>
+            </Fragment>
         </div>
     );
 };

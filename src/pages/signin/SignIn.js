@@ -37,7 +37,7 @@ function SignIn() {
 
             <form onSubmit={handleSubmit}>
                 <label htmlFor="user">
-                    Emailadress:
+                    GebruikersNaam:
                     <input
                         id="user"
                         type="text"
