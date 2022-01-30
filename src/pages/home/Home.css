@@ -44,24 +44,3 @@
     z-index:1;
 }
 
-.back-to-top {
-    position: fixed;
-    right: 2rem;
-    bottom: 2rem;
-    border-radius: 100%;
-    background: #7ac9f9;
-    padding: 0.5rem;
-    border: black;
-    cursor: pointer;
-    opacity: 100%;
-    transition: opacity 0.5s;
-    visibility: visible;
-}
-
-.back-to-top:hover {
-    opacity: 70%;
-}
-
-.hidden {
-    visibility: hidden;
-}
