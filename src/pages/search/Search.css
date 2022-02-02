@@ -1,0 +1,14 @@
+#search-form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #f6efd9;
+}
+h1 {
+    background-color: #f6efd9;
+    margin: 0;
+}
+#search-form1 {
+    justify-content: center;
+}

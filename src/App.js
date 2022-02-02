@@ -8,6 +8,7 @@ import SignUp from "./pages/signup/SignUp";
 import {useContext} from "react";
 import {AuthContext} from "./context/AuthContext";
 import Search from "./pages/search/Search";
+import NavBar from "./context/NavBar";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
 
   return (
     <div className="App">
+        <NavBar />
       <Switch>
         <Route exact path="/">
             {auth? <Home /> : <Redirect to="/signIn"/>}
@@ -23,11 +25,11 @@ function App() {
           <Route path="/objectinfo/:id">
               {auth? <ObjectInfo/> : <Redirect to="/signIn"/>}
           </Route>
-              <Route path="/profile">
-                  {auth? <Profile /> : <Redirect to="/signIn"/>}
-              </Route>
+          <Route path="/profile">
+              {auth? <Profile /> : <Redirect to="/signIn"/>}
+          </Route>
           <Route path="/search">
-              <Search />
+              {auth?  <Search /> : <Redirect to="/signIn"/>}
           </Route>
               <Route exact path="/signin">
                   <SignIn />

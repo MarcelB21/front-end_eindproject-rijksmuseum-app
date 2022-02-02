@@ -33,7 +33,6 @@ const Search = () => {
 
     const [artObjects, toggleArtObjects] = useState([]);
 
-    // `https://www.rijksmuseum.nl/api/nl/collection?key=${apiKey}&involvedMaker=${involvedMaker}&type=${setType}&material=${material}&technique=${technique}&imgOnly=${imgOnly}&topPieces=${topPieces}&objecttype=${objecttype}`
 
     async function fetchData(event) {
         event.preventDefault();
@@ -48,7 +47,7 @@ const Search = () => {
     }
 
     useEffect(() => {
-        async function dynamicSearchData() {
+        async function fetchData() {
             try {
                 const result = await axios.get(`https://www.rijksmuseum.nl/api/nl/collection?key=${apiKey}&p=${pageNumber}&ps=${pageSize}&involvedMaker=${involvedMaker}&imgOnly=${imgOnly}&topPieces=${topPieces}`);
                 console.log(result);
@@ -58,15 +57,18 @@ const Search = () => {
                 console.error(e);
             }
         }
-        dynamicSearchData();
+        fetchData();
     }, [pageSize, pageNumber]);
 
 
 return (
     <div>
-        <form onSubmit={fetchData}>
-            {/*<input type="text" />*/}
+        <h1>Zoekpagina:</h1>
+        <form onSubmit={fetchData} id="search-form">
+            <div id="search-form1">
+            <h3>Naam kunstenaar: </h3>
             <select name="involved-maker" id="involved-maker-field" value={involvedMaker} onChange={(event) => setInvolvedMaker(event.target.value)}>
+                <option value="">(leeg) = geen kunstenaar geselecteerd</option>
                  {/*kunstenaars met de letter A*/}
                 <option value="Pieter%20Aertsen">A-1 = Aertsen, Pieter</option>
                 <option value="Laurens">A-2 = Alma Tadema, Lawrence</option>
@@ -190,15 +192,25 @@ return (
                 {/*kunstenaars met de letter X*/}
                 <option value="Jan+Baptist+Xavery">X-1 = Xavery, Jan Baptist</option>
             </select>
+            </div>
+            <div id="search-form2">
+            <h3>Met afbeelding: </h3>
             <select name="image-only" id="image-only" value={imgOnly} onChange={(event) => setImgOnly(event.target.value)}>
-                <option value="false">alles</option>
-                <option value="true">Alleen met afbeelding</option>
+                <option value="false">Nee, alles</option>
+                <option value="true">Ja, alleen met afbeelding</option>
             </select>
+            </div>
+            <div id="search-form3">
+            <h3>Alleen topstukken: </h3>
             <select name="top-pieces" id="top-pieces" value={topPieces} onChange={(event) => setTopPieces(event.target.value)}>
-                <option value="false">Alle kunst ook geen topstukken</option>
-                <option value="true">Alleen topstukken </option>
+                <option value="false">Nee, alle kunst ook geen topstukken</option>
+                <option value="true">Ja, alleen topstukken </option>
             </select>
+            </div>
+            <div id="search-form4">
+            <h4>Klik op de knop als je selectie definief is:</h4>
             <button type="submit">Hier je resultaat</button>
+            </div>
         </form>
 
         <p>{pageSize} kunstobjecten op de pagina</p>
