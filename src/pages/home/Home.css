@@ -4,9 +4,15 @@
     justify-content: center;
     flex-wrap: wrap;
     padding: 1vh 1vh;
-    height: 1000 px;
+    height: 750px;
     width: 23%;
     float: left;
+}
+
+
+ul {
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .art-body {
@@ -15,9 +21,9 @@
     table-layout: fixed;
     inline-size: 300px;
     word-wrap: normal;
-    /*padding-bottom: 2.5rem;*/
     border: 2px solid black;
     border-radius: 2vh;
+    background-color: white;
 }
 
 #header {

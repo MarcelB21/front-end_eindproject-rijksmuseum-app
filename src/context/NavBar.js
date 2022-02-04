@@ -10,12 +10,14 @@ function NavBar() {
 
     return (
         <nav>
+            <Link to="/contact">
           <span className="logo-container">
             <img src={logo} alt="logo"/>
             <h3>
               Rijksmuseum (kunstcollectie) te Amsterdam
             </h3>
           </span>
+            </Link>
             {auth?
                 <div>
 

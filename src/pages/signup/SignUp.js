@@ -73,6 +73,7 @@ function SignUp() {
                 </button>
             </form>
             <p>Heb je al een account? Je kunt je <Link to="/signin">hier</Link> inloggen.</p>
+            <footer></footer>
         </>
     );
 }

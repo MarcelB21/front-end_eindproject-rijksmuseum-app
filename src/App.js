@@ -9,6 +9,7 @@ import {useContext} from "react";
 import {AuthContext} from "./context/AuthContext";
 import Search from "./pages/search/Search";
 import NavBar from "./context/NavBar";
+import Contact from "./pages/contact/Contact";
 
 
 function App() {
@@ -37,6 +38,9 @@ function App() {
               <Route exact path="/signup">
                   <SignUp />
               </Route>
+          <Route exact path="/contact">
+              <Contact />
+          </Route>
       </Switch>
     </div>
   );

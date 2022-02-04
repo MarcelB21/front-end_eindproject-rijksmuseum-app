@@ -44,9 +44,10 @@ function Profile() {
                 <p>Je kunt op deze webpagina twee kanten op:</p>
                 <ul>
                     <li>je kunt naar de kunst-collectie gaan en daar kunst bekijken, houdt er rekening mee dat je max 100 pagina's kunt bekijken en er maximaal 100 kunstobjecten per pagina zijn: <p>Link naar de <Link to="/">Kunst-collectie</Link></p></li>
-                    <li>je kunt naar de zoekpagina gaan en daar per kunstenaar bekijken wat de kunstenaar gemaakt heeft. Je hebt hetzelfde limit aan kunstobjecten als bij de kunst-collectie. <p>Link naar de <Link to="/search">Zoekpagina</Link></p></li>
+                    <li>je kunt naar de zoekpagina gaan en daar per kunstenaar bekijken wat de kunstenaar gemaakt heeft. Je hebt hetzelfde limit aan kunstobjecten als bij de kunst-collectie. Tevens is het zo dat als je kijkt naar de zoekfunctie op kunstenaar dat je een letter met cijfer ziet, dit is gedaan voor de gebruikersvriendelijkheid want ipv de kunstenaar te onthouden, hoef je nu alleen maar één letter en een (of twee) cijfer(s) te onthouden! <p>Link naar de <Link to="/search">Zoekpagina</Link></p></li>
                 </ul>
             </section>
+            <footer></footer>
         </>
     );
 }
