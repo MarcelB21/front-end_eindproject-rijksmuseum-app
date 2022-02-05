@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# Gebruikers-handleiding van de website van het Rijksmuseum
+## Benodigdheden
+- Een schone pc;
+- Een applicatie (IDE) om deze website te draaien;
+- De APIkey die is meegeleverd in de .env;
+    + onderstaande handleiding!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Handleiding
 
-## Available Scripts
+- Stap 1: Kopieer de code door naar de code te gaan op GitHub;
+- Stap 2: Plak de code in Version Control van je IDE;
+- Stap 3: Download de website naar je PC in je IDE;
+- Stap 4: Plak de APIkey in de volgende regel: "const apiKey = "
+Plak het tussen de aanhalingstekens, bij de volgende bestanden:
+  - Home.js
+  - ObjectInfo.js
+  - Search.js
 
-In the project directory, you can run:
-
+- Stap 5: in de terminal van je IDE, voor de volgende commando uit
+### `npm install`
+- Stap 6: in de terminal van je IDE, voor de volgende commando uit
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Stap 7: Ga naar de register-pagina en geef een gebruikersnaam, email en wachtwoord op!
+- Stap 8: Ga nu naar de inlog-pagina en geef je gebruikersnaam en wachtwoord op, om in de website te komen.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Klaar, je kunt nu gebruik maken van de website!
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Accounts
+Er is geen standaard account waar je gebruik van kan maken, je dient jezelf eerst te registreren en daarna aan te melden voor de website.
+Om er gebruik van te maken!
