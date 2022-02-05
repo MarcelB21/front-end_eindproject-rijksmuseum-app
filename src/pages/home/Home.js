@@ -10,7 +10,7 @@ const Home = () => {
 
     const [art, setArt] = useState('');
     
-    const apiKey = 'IofFTSpv';
+    const apiKey = '';
 
     let [pageSize, setPageSize] = useState(10);
     let handleIncrease = (event) => {

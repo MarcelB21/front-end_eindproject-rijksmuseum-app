@@ -4,7 +4,7 @@ import axios from "axios";
 import Button from "../../compontents/button/Button";
 import {Link} from "react-router-dom";
 
-const apiKey = 'IofFTSpv';
+const apiKey = '';
 
 const Search = () => {
 
