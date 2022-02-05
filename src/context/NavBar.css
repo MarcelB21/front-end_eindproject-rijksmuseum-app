@@ -1,0 +1,28 @@
+nav {
+    background-color: #f6efd9;
+    color: black;
+    display: flex;
+    padding: 0 32px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+nav a,
+nav a:visited,
+nav a:active {
+    color: white;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px;
+    color: black;
+}
+
+.logo-container img {
+    width: 100px;
+    margin-right: 8px;
+}

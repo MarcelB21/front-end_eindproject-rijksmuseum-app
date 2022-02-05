@@ -1,0 +1,11 @@
+div {
+    background-color: #f6efd9;
+    border: none;
+}
+
+footer {
+    position: -ms-device-fixed;
+    background-color: #f6efd9;
+    bottom: 0;
+    min-height: 54vh;
+}
