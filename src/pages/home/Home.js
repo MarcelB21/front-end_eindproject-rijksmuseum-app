@@ -35,7 +35,6 @@ const Home = () => {
         async function fetchData() {
             try {
                 const result = await axios.get(`https://www.rijksmuseum.nl/api/nl/collection?key=${apiKey}&involvedMaker=Rembrandt+van+Rijn&p=${pageNumber}&ps=${pageSize}`);
-                console.log(result.data.artObjects);
                 setArt(result.data.artObjects);
             } catch (e) {
                 console.error(e);

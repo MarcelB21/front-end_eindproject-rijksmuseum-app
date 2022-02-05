@@ -21,7 +21,6 @@ function Profile() {
                         }
                     })
                 setProfileData(result.data);
-                console.log(result);
             } catch (e) {
                 console.log(e);
             }

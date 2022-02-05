@@ -14,10 +14,8 @@ const ObjectInfo = () => {
         async function getObjectInfo() {
             try {
                 const result = await axios.get(`https://www.rijksmuseum.nl/api/nl/collection/${id}?key=${apiKey}`);
-                console.log(result);
                 setArtInfo(result);
                 setArt(result.data.artObject.objectTypes);
-                console.log(result.data.artObject.objectTypes);
             } catch (e) {
                 console.error(e);
             }

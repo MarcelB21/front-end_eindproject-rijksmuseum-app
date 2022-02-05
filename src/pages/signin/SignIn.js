@@ -22,7 +22,6 @@ function SignIn() {
                     username: user,
                     password: password,
                 });
-            console.log(result.data);
             history.push("/")
             login(result.data.accessToken);
         } catch (e) {

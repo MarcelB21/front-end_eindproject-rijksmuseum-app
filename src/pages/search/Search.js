@@ -38,8 +38,6 @@ const Search = () => {
         event.preventDefault();
         try {
             const result = await axios.get(`https://www.rijksmuseum.nl/api/nl/collection?key=${apiKey}&p=&involvedMaker=${involvedMaker}&imgOnly=${imgOnly}&topPieces=${topPieces}`);
-            console.log(result);
-
             toggleArtObjects(result.data.artObjects);
         } catch (e) {
             console.error(e);
@@ -50,8 +48,6 @@ const Search = () => {
         async function fetchData() {
             try {
                 const result = await axios.get(`https://www.rijksmuseum.nl/api/nl/collection?key=${apiKey}&p=${pageNumber}&ps=${pageSize}&involvedMaker=${involvedMaker}&imgOnly=${imgOnly}&topPieces=${topPieces}`);
-                console.log(result);
-
                 toggleArtObjects(result.data.artObjects);
             } catch (e) {
                 console.error(e);

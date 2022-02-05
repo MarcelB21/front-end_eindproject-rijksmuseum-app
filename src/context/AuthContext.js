@@ -16,8 +16,6 @@ const AuthContextProvider = ({children}) => {
 
     function login(JWT){
         localStorage.setItem('token', JWT);
-        console.log('Gebruiker is ingelogd!');
-
 
         const decode = jwt_decode(JWT);
 
@@ -32,7 +30,6 @@ const AuthContextProvider = ({children}) => {
             user: null,
             status: 'done',
         });
-        console.log('Gebruiker is uitgelogd!');
         history.push("/");
     }
 
@@ -62,7 +59,6 @@ const AuthContextProvider = ({children}) => {
     }
 
     useEffect(() => {
-        console.log("Context wordt gerefresht")
         const token = localStorage.getItem('token');
 
         if (token) {
