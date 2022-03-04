@@ -1,7 +1,10 @@
 .signin {
-    /*display: flex;*/
-    /*align-items: center;*/
-    /*justify-content: center;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    background-color: #031023;
     width: 100%;
 }
 
@@ -15,6 +18,18 @@ form {
     border-radius: 4px;
 }
 
+.register {
+    color: white;
+}
+
+.register:visited {
+    color: yellowgreen;
+}
+
+.register:hover {
+    color: red;
+}
+
 form label {
     margin: 4px 0;
     font-weight: bold;
@@ -25,9 +40,4 @@ form input {
     padding: 4px 8px;
     margin: 6px 0;
 }
-footer {
-    position: -ms-device-fixed;
-    background-color: #f6efd9;
-    bottom: 0;
-    min-height: 70vh;
-}
+

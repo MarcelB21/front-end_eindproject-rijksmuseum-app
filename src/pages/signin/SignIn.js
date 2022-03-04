@@ -62,9 +62,8 @@ function SignIn() {
                 </button>
             </form>
 
-            <p>Heb je nog geen account? <Link to="/signup">Registreer</Link> je dan eerst.</p>
+            <p>Heb je nog geen account? <Link className="register" to="/signup">Registreer</Link> je dan eerst.</p>
             </div>
-            <footer></footer>
         </>
     );
 }

@@ -72,7 +72,7 @@ function SignUp() {
                     Registratie
                 </button>
             </form>
-            <p>Heb je al een account? Je kunt je <Link to="/signin">hier</Link> inloggen.</p>
+            <p>Heb je al een account? Je kunt je <Link className="login" to="/signin">hier</Link> inloggen.</p>
         </div>
     );
 }

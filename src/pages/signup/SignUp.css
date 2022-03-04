@@ -4,7 +4,6 @@
     justify-content: center;
     flex-direction: column;
     background-color: #031023;
-    /*border-style: solid;*/
     color: white;
     margin-top: 50px;
     width: 100%;
@@ -12,9 +11,6 @@
 
 
 form {
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*align-items: center;*/
     color: white;
     background-color: #0A1E3A;
     border-color: #F6BC41;
@@ -41,4 +37,14 @@ form input {
     text-align: center;
 }
 
+.login {
+    color: white;
+}
 
+.login:visited {
+    color: yellowgreen;
+}
+
+.login:hover {
+    color: red;
+}
