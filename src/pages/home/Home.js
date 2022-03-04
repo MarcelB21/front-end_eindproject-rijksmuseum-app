@@ -3,14 +3,14 @@ import React, {Fragment, useEffect, useState} from "react";
 import axios from "axios";
 import {Link, useHistory} from "react-router-dom";
 import Button from "../../compontents/button/Button";
-
+import './Home.css'
 
 
 const Home = () => {
 
     const [art, setArt] = useState('');
     
-    const apiKey = '';
+    const apiKey = 'IofFTSpv';
 
     let [pageSize, setPageSize] = useState(10);
     let handleIncrease = (event) => {

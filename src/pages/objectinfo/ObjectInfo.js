@@ -7,7 +7,7 @@ const ObjectInfo = () => {
 
     const [artInfo, setArtInfo] = useState();
     const [art, setArt] = useState([]);
-    const apiKey = '';
+    const apiKey = 'IofFTSpv';
     const {id} = useParams();
 
     useEffect(() => {
