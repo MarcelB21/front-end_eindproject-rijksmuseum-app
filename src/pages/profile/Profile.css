@@ -1,6 +1,43 @@
-footer {
-    position: -ms-device-fixed;
-    background-color: #f6efd9;
-    bottom: 0;
-    min-height: 27vh;
+.body {
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #031023;
+}
+
+.section1 {
+    display: flex;
+    flex-direction: column;
+    border-width: 5px;
+    border-color: #F6BC41;
+    border-style: solid;
+    color: white;
+    background-color: #0A1E3A;
+    padding: 15px;
+}
+
+section2 {
+    display: flex;
+}
+
+.h1 {
+    background-color: #031023;
+}
+
+.h2 {
+    margin-top: 0px;
+}
+
+.Link {
+    color: white;
+}
+
+.Link:visited {
+    color: yellowgreen;
+}
+
+.Link:hover {
+    color: red;
 }

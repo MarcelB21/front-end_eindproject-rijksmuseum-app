@@ -5,7 +5,6 @@
     flex-direction: column;
     background-color: #031023;
     color: white;
-    margin-top: 50px;
     width: 100%;
 }
 
@@ -35,6 +34,11 @@ form input {
 
 .submit-button {
     text-align: center;
+}
+
+h1 {
+    background-color: #031023;
+    margin: 0;
 }
 
 .login {

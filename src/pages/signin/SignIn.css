@@ -12,10 +12,14 @@
 form {
     display: flex;
     flex-direction: column;
-    background-color: #f6efd9;
+    background-color: #031023;
     padding: 32px;
     max-width: 300px;
     border-radius: 4px;
+}
+
+.h1 {
+    background-color: #031023;
 }
 
 .register {

@@ -32,7 +32,7 @@ function SignIn() {
     return (
         <>
             <div className="signin">
-            <h1>Inloggen</h1>
+            <h1 className="h1">Inloggen</h1>
             <p>Welkom bij de website van het Rijksmuseum gemaakt door <strong>Marcel Brzezinski</strong> als eindopdracht van <strong>Novi Hogeschool te Utrecht</strong>!</p>
 
             <form onSubmit={handleSubmit}>
