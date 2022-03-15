@@ -1,10 +1,37 @@
+.signin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    background-color: #031023;
+    width: 100%;
+}
+
+
 form {
     display: flex;
     flex-direction: column;
-    background-color: #f6efd9;
+    background-color: #031023;
     padding: 32px;
     max-width: 300px;
     border-radius: 4px;
+}
+
+.h1 {
+    background-color: #031023;
+}
+
+.register {
+    color: white;
+}
+
+.register:visited {
+    color: yellowgreen;
+}
+
+.register:hover {
+    color: red;
 }
 
 form label {
@@ -17,9 +44,8 @@ form input {
     padding: 4px 8px;
     margin: 6px 0;
 }
+
 footer {
-    position: -ms-device-fixed;
-    background-color: #f6efd9;
-    bottom: 0;
-    min-height: 70vh;
-}
+    background-color: #0A1E3A;
+    }
+

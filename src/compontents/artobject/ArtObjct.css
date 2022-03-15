@@ -1,0 +1,21 @@
+.objectInfo {
+    border-width: 4px;
+    border-style: solid;
+    border-color: #F6BC41;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    inline-size: 750px;
+}
+
+h4 {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+img {
+    border-color: #F6BC41;
+    border-style: solid;
+    border-width: 2px;
+}

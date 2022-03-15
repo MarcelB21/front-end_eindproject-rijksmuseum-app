@@ -10,7 +10,7 @@ import {AuthContext} from "./context/AuthContext";
 import Search from "./pages/search/Search";
 import NavBar from "./context/NavBar";
 import Contact from "./pages/contact/Contact";
-
+import Footer from "./context/Footer"
 
 function App() {
 
@@ -42,6 +42,7 @@ function App() {
               <Contact />
           </Route>
       </Switch>
+            <Footer />
     </div>
   );
 }

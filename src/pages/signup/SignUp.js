@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import { Link } from 'react-router-dom';
+import './SignUp.css'
 
 function SignUp() {
 
@@ -32,8 +33,8 @@ function SignUp() {
 
 
     return (
-        <>
-            <h1>Registreren</h1>
+        <div className="signup">
+            <h1 className="h1">Registreren</h1>
             <p>Welkom bij de registratiepagina van het eindproject - Rijksmuseum te Amsterdam</p>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="email">
@@ -66,14 +67,13 @@ function SignUp() {
                         onChange={(e) => setPassword(e.target.value)}
                     />
                 </label>
-                <button
+                <button className="submit-button"
                     type="submit">
                     Registratie
                 </button>
             </form>
-            <p>Heb je al een account? Je kunt je <Link to="/signin">hier</Link> inloggen.</p>
-            <footer></footer>
-        </>
+            <p>Heb je al een account? Je kunt je <Link className="login" to="/signin">hier</Link> inloggen.</p>
+        </div>
     );
 }
 

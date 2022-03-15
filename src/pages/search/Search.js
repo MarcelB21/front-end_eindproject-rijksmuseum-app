@@ -2,18 +2,20 @@ import './Search.css';
 import React, {useEffect, useState} from "react";
 import axios from "axios";
 import Button from "../../compontents/button/Button";
-import {Link} from "react-router-dom";
+import Option from "../../compontents/option/Option";
+import Footer from "../../context/Footer";
+import ArtPiece from "../../compontents/artpiece/ArtPiece";
 
-const apiKey = '';
+const apiKey = 'IofFTSpv';
 
 const Search = () => {
 
-    let [pageSize, setPageSize] = useState(10);
-    let handleIncrease = (event) => {
+    const [pageSize, setPageSize] = useState(10);
+    const handleIncrease = (event) => {
         setPageSize(pageSize + 10);
         event.preventDefault();
     }
-    let handleDecrease = (event) => {
+    const handleDecrease = (event) => {
         setPageSize(pageSize - 10);
         event.preventDefault();
     }
@@ -66,145 +68,145 @@ const Search = () => {
                     <h3>Naam kunstenaar: </h3>
                     <select name="involved-maker" id="involved-maker-field" value={involvedMaker}
                             onChange={(event) => setInvolvedMaker(event.target.value)}>
-                        <option value="">(leeg) = geen kunstenaar geselecteerd</option>
+                        <Option Value="">(leeg) = geen kunstenaar geselecteerd</Option>
                         {/*kunstenaars met de letter A*/}
-                        <option value="Pieter%20Aertsen">A-1 = Aertsen, Pieter</option>
-                        <option value="Laurens">A-2 = Alma Tadema, Lawrence</option>
-                        <option value="Karel+Appel">A-3 = Appel, Karel</option>
-                        <option value="Hendrick+Avercamp">A-4 = Avercamp, Hendrick</option>
+                        <Option Value="Pieter%20Aertsen">A-1 = Aertsen, Pieter</Option>
+                        <Option Value="Laurens">A-2 = Alma Tadema, Lawrence</Option>
+                        <Option Value="Karel+Appel">A-3 = Appel, Karel</Option>
+                        <Option Value="Hendrick+Avercamp">A-4 = Avercamp, Hendrick</Option>
                         {/*kunstenaars met de letter B*/}
-                        <option value="Dirck+van+Baburen">B-01 = Baburen, Dirck van</option>
-                        <option value="Ludolf+Bakhuysen">B-02 = Bakhuysen, Ludolf</option>
-                        <option value="Nicolaes+Pietersz.+Berchem">B-03 = Berchem, Nicolaes Pietersz.</option>
-                        <option value="Joachim+Bueckelaer">B-04 = Beuckelaer, Joachim</option>
-                        <option value="Albert+Gerard+Bilders">B-05 = Bilders, Albert Gerard</option>
-                        <option value="Abraham+Bloemaert">B-06 = Bloemaert, Abraham</option>
-                        <option value="Ferdinand+Bol">B-07 = Bol, Ferdinand</option>
-                        <option value="Gerard+ter+Borch+(II)">B-08 = Borch, Gerard ter (II)</option>
-                        <option value="Jan+Both">B-09 = Both, Jan</option>
-                        <option value="André+Charles+Boulle">B-10 = Boulle, André Charles</option>
-                        <option value="George+Hendrik+Breitner">B-11 = Breitner, George Hendrik</option>
-                        <option value="Hendrick+ter+Brugghen">B-12 = Brugghen, Hendrick ter</option>
-                        <option value="Willem+Pietersz.+Buytewech">B-13 = Buytewech, Willem Pietersz.</option>
+                        <Option Value="Dirck+van+Baburen">B-01 = Baburen, Dirck van</Option>
+                        <Option Value="Ludolf+Bakhuysen">B-02 = Bakhuysen, Ludolf</Option>
+                        <Option Value="Nicolaes+Pietersz.+Berchem">B-03 = Berchem, Nicolaes Pietersz.</Option>
+                        <Option Value="Joachim+Bueckelaer">B-04 = Beuckelaer, Joachim</Option>
+                        <Option Value="Albert+Gerard+Bilders">B-05 = Bilders, Albert Gerard</Option>
+                        <Option Value="Abraham+Bloemaert">B-06 = Bloemaert, Abraham</Option>
+                        <Option Value="Ferdinand+Bol">B-07 = Bol, Ferdinand</Option>
+                        <Option Value="Gerard+ter+Borch+(II)">B-08 = Borch, Gerard ter (II)</Option>
+                        <Option Value="Jan+Both">B-09 = Both, Jan</Option>
+                        <Option Value="André+Charles+Boulle">B-10 = Boulle, André Charles</Option>
+                        <Option Value="George+Hendrik+Breitner">B-11 = Breitner, George Hendrik</Option>
+                        <Option Value="Hendrick+ter+Brugghen">B-12 = Brugghen, Hendrick ter</Option>
+                        <Option Value="Willem+Pietersz.+Buytewech">B-13 = Buytewech, Willem Pietersz.</Option>
                         {/*kunstenaars met de letter C*/}
-                        <option value="Pieter+Claesz.">C-1 = Claesz., Pieter</option>
-                        <option value="Adriaen+Coorte">C-2 = Coorte, Adriaen</option>
-                        <option value="Cornelis+Cornelisz.+van+Haarlem">C-3 = Cornelisz. van Haarlem, Cornelis</option>
-                        <option value="Jacob+Cornelisz.+van+Oostsanen">C-4 = Cornelisz. van Oostsanen, Jacob</option>
-                        <option value="Jacobus+Cressant">C-5 = Cressant, Jacobus</option>
-                        <option value="Aelbert+Cuyp">C-6 = Cuyp, Aelbert</option>
+                        <Option Value="Pieter+Claesz.">C-1 = Claesz., Pieter</Option>
+                        <Option Value="Adriaen+Coorte">C-2 = Coorte, Adriaen</Option>
+                        <Option Value="Cornelis+Cornelisz.+van+Haarlem">C-3 = Cornelisz. van Haarlem, Cornelis</Option>
+                        <Option Value="Jacob+Cornelisz.+van+Oostsanen">C-4 = Cornelisz. van Oostsanen, Jacob</Option>
+                        <Option Value="Jacobus+Cressant">C-5 = Cressant, Jacobus</Option>
+                        <Option Value="Aelbert+Cuyp">C-6 = Cuyp, Aelbert</Option>
                         {/*kunstenaars met de letter D*/}
-                        <option value="Herman+Doomer">D-1 = Doomer, Herman</option>
-                        <option value="Gerard+Dou">D-2 = Dou, Gerard</option>
-                        <option value="Anthony+van+Dyck">D-3 = Dyck, Anthony van</option>
-                        <option value="Albrecht+Dürer">D-4 = Dürer, Albrecht</option>
+                        <Option Value="Herman+Doomer">D-1 = Doomer, Herman</Option>
+                        <Option Value="Gerard+Dou">D-2 = Dou, Gerard</Option>
+                        <Option Value="Anthony+van+Dyck">D-3 = Dyck, Anthony van</Option>
+                        <Option Value="Albrecht+Dürer">D-4 = Dürer, Albrecht</Option>
                         {/*kunstenaars met de letter E*/}
-                        <option value="Gerbrand+van+den+Eeckhout">E-1 = Eeckhout, Gerbrand van den</option>
-                        <option value="Caesar+Boëtius+van+Everdingen">E-2 = Everdingen, Caesar Boëtius van</option>
+                        <Option Value="Gerbrand+van+den+Eeckhout">E-1 = Eeckhout, Gerbrand van den</Option>
+                        <Option Value="Caesar+Boëtius+van+Everdingen">E-2 = Everdingen, Caesar Boëtius van</Option>
                         {/*kunstenaars met de letter F*/}
-                        <option value="Govert+Flinck">F-1 = Flinck, Govert</option>
+                        <Option Value="Govert+Flinck">F-1 = Flinck, Govert</Option>
                         {/*kunstenaars met de letter G*/}
-                        <option value="Paul+Joseph+Constantin+Gabriël">G-1 = Gabriël, Paul Joseph Constantin</option>
-                        <option value="Gao+Qipei">G-2 = Gao Qipei</option>
-                        <option value="Geertgen+tot+Sint+Jans">G-3 = Geertgen tot Sint Jans</option>
-                        <option value="Jacob+de+Gheyn">G-4 = Gheyn, Jacob de</option>
-                        <option value="Giambologna">G-5 = Giambologna</option>
-                        <option value="Vincent+van+Gogh">G-6 = Gogh, Vincent van</option>
-                        <option value="Hendrick Goltzius">G-7 = Goltzius, Hendrick</option>
-                        <option value="Jan+van+Goyen">G-8 = Goyen, Jan van</option>
+                        <Option Value="Paul+Joseph+Constantin+Gabriël">G-1 = Gabriël, Paul Joseph Constantin</Option>
+                        <Option Value="Gao+Qipei">G-2 = Gao Qipei</Option>
+                        <Option Value="Geertgen+tot+Sint+Jans">G-3 = Geertgen tot Sint Jans</Option>
+                        <Option Value="Jacob+de+Gheyn">G-4 = Gheyn, Jacob de</Option>
+                        <Option Value="Giambologna">G-5 = Giambologna</Option>
+                        <Option Value="Vincent+van+Gogh">G-6 = Gogh, Vincent van</Option>
+                        <Option Value="Hendrick Goltzius">G-7 = Goltzius, Hendrick</Option>
+                        <Option Value="Jan+van+Goyen">G-8 = Goyen, Jan van</Option>
                         {/*kunstenaars met de letter H*/}
-                        <option value="Dirck+Hals">H-01 = Hals, Dirck</option>
-                        <option value="Frans+Hals">H-02 = Hals, Frans</option>
-                        <option value="Willem+Claesz.+Heda">H-03 = Heda, Willem Claesz.</option>
-                        <option value="Jan+Davidsz.+de+Heem">H-04 = Heem, Jan Davidsz. de</option>
-                        <option value="Maarten+van+Heemskerck">H-05 = Heemskerck, Maarten van</option>
-                        <option value="Bartholomeus+van+der+Helst">H-06 = Helst, Bartholomeus van der</option>
-                        <option value="Hiroshige%20(I)%20%2C%20Utagawa">H-07 = Utagawa Hiroshige I</option>
-                        <option value="Katsushika+Hokusai">H-08 = Hokusai, Katsushika</option>
-                        <option value="Gerard+van+Honthorst">H-09 = Honthorst, Gerard van</option>
-                        <option value="Pieter+de+Hooch">H-10 = Hooch, Pieter de</option>
+                        <Option Value="Dirck+Hals">H-01 = Hals, Dirck</Option>
+                        <Option Value="Frans+Hals">H-02 = Hals, Frans</Option>
+                        <Option Value="Willem+Claesz.+Heda">H-03 = Heda, Willem Claesz.</Option>
+                        <Option Value="Jan+Davidsz.+de+Heem">H-04 = Heem, Jan Davidsz. de</Option>
+                        <Option Value="Maarten+van+Heemskerck">H-05 = Heemskerck, Maarten van</Option>
+                        <Option Value="Bartholomeus+van+der+Helst">H-06 = Helst, Bartholomeus van der</Option>
+                        <Option Value="Hiroshige%20(I)%20%2C%20Utagawa">H-07 = Utagawa Hiroshige I</Option>
+                        <Option Value="Katsushika+Hokusai">H-08 = Hokusai, Katsushika</Option>
+                        <Option Value="Gerard+van+Honthorst">H-09 = Honthorst, Gerard van</Option>
+                        <Option Value="Pieter+de+Hooch">H-10 = Hooch, Pieter de</Option>
                         {/*kunstenaars met de letter I*/}
-                        <option value="Isaac+Israels">I-1 = Israels, Isaac</option>
-                        <option value="Jozef+Israëls">I-2 = Israëls, Jozef</option>
+                        <Option Value="Isaac+Israels">I-1 = Israels, Isaac</Option>
+                        <Option Value="Jozef+Israëls">I-2 = Israëls, Jozef</Option>
                         {/*kunstenaars met de letter J*/}
-                        <option value="Wenzel+Jamnitzer">J-1 = Jamnitzer, Wenzel</option>
+                        <Option Value="Wenzel+Jamnitzer">J-1 = Jamnitzer, Wenzel</Option>
                         {/*kunstenaars met de letter K*/}
-                        <option value="Adriaen+Thomasz.+Key">K-1 = Key, Adriaen Thomasz.</option>
-                        <option value="Philips+Koninck">K-2 = Koninck, Philips</option>
-                        <option value="Willem+Bartel+van+der+Kooi">K-3 = Kooi, Willem Bartel van der</option>
-                        <option value="Jan+Adam+Kruseman">K-4 = Kruseman, Jan Adam</option>
+                        <Option Value="Adriaen+Thomasz.+Key">K-1 = Key, Adriaen Thomasz.</Option>
+                        <Option Value="Philips+Koninck">K-2 = Koninck, Philips</Option>
+                        <Option Value="Willem+Bartel+van+der+Kooi">K-3 = Kooi, Willem Bartel van der</Option>
+                        <Option Value="Jan+Adam+Kruseman">K-4 = Kruseman, Jan Adam</Option>
                         {/*kunstenaars met de letter L*/}
-                        <option value="Gerard+de+Lairesse">L-1 = Lairesse, Gerard de</option>
-                        <option value="Ren%C3%A9+Lalique">L-2 = Lalique, Rene Jules</option>
-                        <option value="Pieter+Lastman">L-3 = Lastman, Pieter</option>
-                        <option value="Adriaan+de+Lelie">L-4 = Lelie, Adriaan de</option>
-                        <option value="Lucas+van+Leyden">L-5 = Leyden, Lucas van</option>
-                        <option value="Jan+Lievens">L-6 = Lievens, Jan</option>
-                        <option value="Jean-Etienne+Liotard">L-7 = Liotard, Jean-Etienne</option>
+                        <Option Value="Gerard+de+Lairesse">L-1 = Lairesse, Gerard de</Option>
+                        <Option Value="Ren%C3%A9+Lalique">L-2 = Lalique, Rene Jules</Option>
+                        <Option Value="Pieter+Lastman">L-3 = Lastman, Pieter</Option>
+                        <Option Value="Adriaan+de+Lelie">L-4 = Lelie, Adriaan de</Option>
+                        <Option Value="Lucas+van+Leyden">L-5 = Leyden, Lucas van</Option>
+                        <Option Value="Jan+Lievens">L-6 = Lievens, Jan</Option>
+                        <Option Value="Jean-Etienne+Liotard">L-7 = Liotard, Jean-Etienne</Option>
                         {/*kunstenaars met de letter M*/}
-                        <option value="Nicolaes+Maes">M-1 = Maes, Nicolaes</option>
-                        <option value="Karel+van+Mander">M-2 = Mander, Karel van</option>
-                        <option value="Anton+Mauve">M-3 = Mauve, Anton</option>
-                        <option value="Meester+van+Alkmaar">M-4 = Meester van Alkmaar</option>
-                        <option value="Hendrik+Willem+Mesdag">M-5 = Mesdag, Hendrik Willem</option>
-                        <option value="Gabriël+Metsu">M-6 = Metsu, Gabriël</option>
-                        <option value="Michiel Jansz. van Mierevelt">M-7 = Mierevelt, Michiel Jansz. van</option>
-                        <option value="Abraham+Mignon">M-8 = Mignon, Abraham</option>
+                        <Option Value="Nicolaes+Maes">M-1 = Maes, Nicolaes</Option>
+                        <Option Value="Karel+van+Mander">M-2 = Mander, Karel van</Option>
+                        <Option Value="Anton+Mauve">M-3 = Mauve, Anton</Option>
+                        <Option Value="Meester+van+Alkmaar">M-4 = Meester van Alkmaar</Option>
+                        <Option Value="Hendrik+Willem+Mesdag">M-5 = Mesdag, Hendrik Willem</Option>
+                        <Option Value="Gabriël+Metsu">M-6 = Metsu, Gabriël</Option>
+                        <Option Value="Michiel Jansz. van Mierevelt">M-7 = Mierevelt, Michiel Jansz. van</Option>
+                        <Option Value="Abraham+Mignon">M-8 = Mignon, Abraham</Option>
                         {/*kunstenaars met de letter O*/}
-                        <option value="Adriaen+van+Ostade">O-1 = Ostade, Adriaen van</option>
+                        <Option Value="Adriaen+van+Ostade">O-1 = Ostade, Adriaen van</Option>
                         {/*kunstenaars met de letter P*/}
-                        <option value="Jan+Willem+Pieneman">P-1 = Pieneman, Jan Willem</option>
-                        <option value="Nicolaas+Pieneman">P-2 = Pieneman, Nicolaas</option>
-                        <option value="Frans+Jansz.+Post">P-3 = Post, Frans Jansz.</option>
-                        <option value="Paulus+Potter">P-4 = Potter, Paulus</option>
+                        <Option Value="Jan+Willem+Pieneman">P-1 = Pieneman, Jan Willem</Option>
+                        <Option Value="Nicolaas+Pieneman">P-2 = Pieneman, Nicolaas</Option>
+                        <Option Value="Frans+Jansz.+Post">P-3 = Post, Frans Jansz.</Option>
+                        <Option Value="Paulus+Potter">P-4 = Potter, Paulus</Option>
                         {/*kunstenaars met de letter R*/}
-                        <option value="Rembrandt%20van%20Rijn">R-1 = Rembrandt van Rijn</option>
-                        <option value="Rembrandt+Harmensz.+van+Rijn">R-2 = Rembrandt Harmensz. van Rijn</option>
-                        <option value="Peter+Paul+Rubens">R-3 = Rubens, Peter Paul</option>
-                        <option value="Salomon+van+Ruysdael">R-4 = Ruysdael, Salomon van</option>
+                        <Option Value="Rembrandt%20van%20Rijn">R-1 = Rembrandt van Rijn</Option>
+                        <Option Value="Rembrandt+Harmensz.+van+Rijn">R-2 = Rembrandt Harmensz. van Rijn</Option>
+                        <Option Value="Peter+Paul+Rubens">R-3 = Rubens, Peter Paul</Option>
+                        <Option Value="Salomon+van+Ruysdael">R-4 = Ruysdael, Salomon van</Option>
                         {/*kunstenaars met de letter S*/}
-                        <option value="Pieter+Jansz.+Saenredam">S-1 = Saenredam, Pieter Jansz.</option>
-                        <option value="Roelant+Savery">S-2 = Savery, Roelant</option>
-                        <option value="Johan%20Gregor%20van%20der%20Schardt">S-3 = Schardt, Jan Gregor van der</option>
-                        <option value="Gerrit+Schouten">S-4 = Schouten, Gerrit</option>
-                        <option value="Jan+van+Scorel">S-5 = Scorel, Jan van</option>
-                        <option value="Hercules+Segers">S-6 = Segers, Hercules</option>
-                        <option value="Jan+Havicksz.+Steen">S-7 = Steen, Jan Havicksz.</option>
-                        <option value="Michael+Sweerts">S-8 = Sweerts, Michael</option>
+                        <Option Value="Pieter+Jansz.+Saenredam">S-1 = Saenredam, Pieter Jansz.</Option>
+                        <Option Value="Roelant+Savery">S-2 = Savery, Roelant</Option>
+                        <Option Value="Johan%20Gregor%20van%20der%20Schardt">S-3 = Schardt, Jan Gregor van der</Option>
+                        <Option Value="Gerrit+Schouten">S-4 = Schouten, Gerrit</Option>
+                        <Option Value="Jan+van+Scorel">S-5 = Scorel, Jan van</Option>
+                        <Option Value="Hercules+Segers">S-6 = Segers, Hercules</Option>
+                        <Option Value="Jan+Havicksz.+Steen">S-7 = Steen, Jan Havicksz.</Option>
+                        <Option Value="Michael+Sweerts">S-8 = Sweerts, Michael</Option>
                         {/*kunstenaars met de letter T*/}
-                        <option value="Cornelis+Troost">T-1 = Troost, Cornelis</option>
+                        <Option Value="Cornelis+Troost">T-1 = Troost, Cornelis</Option>
                         {/*kunstenaars met de letter V*/}
-                        <option value="Jean+Baptiste+Vanmour">V-01 = Vanmour, Jean Baptiste</option>
-                        <option value="Willem+van+de+Velde">V-02 = Velde, Willem van de</option>
-                        <option value="Willem+van+de+Velde+(II)">V-03 = Velde, Willem van de (II)</option>
-                        <option value="Adriaen+Pietersz.+van+de+Venne">V-04 = Venne, Adriaen Pietersz. van de</option>
-                        <option value="Rombout+Verhulst">V-05 = Verhulst, Rombout</option>
-                        <option value="Johannes+Vermeer">V-06 = Vermeer, Johannes</option>
-                        <option value="Johannes+Cornelisz.+Verspronck">V-07 = Verspronck, Johannes Cornelisz.</option>
-                        <option value="Adam+van+Vianen+(I)">V-08 = Vianen, Adam van (I)</option>
-                        <option value="Paulus+Willemsz.+van+Vianen">V-09 = Vianen, Paulus Willemsz. van</option>
-                        <option value="Claes+Jansz.+Visscher+(II)">V-10 = Visscher, Claes Jansz. (II)</option>
-                        <option value="Hendrik+Voogd">V-11 = Voogd, Hendrik</option>
+                        <Option Value="Jean+Baptiste+Vanmour">V-01 = Vanmour, Jean Baptiste</Option>
+                        <Option Value="Willem+van+de+Velde">V-02 = Velde, Willem van de</Option>
+                        <Option Value="Willem+van+de+Velde+(II)">V-03 = Velde, Willem van de (II)</Option>
+                        <Option Value="Adriaen+Pietersz.+van+de+Venne">V-04 = Venne, Adriaen Pietersz. van de</Option>
+                        <Option Value="Rombout+Verhulst">V-05 = Verhulst, Rombout</Option>
+                        <Option Value="Johannes+Vermeer">V-06 = Vermeer, Johannes</Option>
+                        <Option Value="Johannes+Cornelisz.+Verspronck">V-07 = Verspronck, Johannes Cornelisz.</Option>
+                        <Option Value="Adam+van+Vianen+(I)">V-08 = Vianen, Adam van (I)</Option>
+                        <Option Value="Paulus+Willemsz.+van+Vianen">V-09 = Vianen, Paulus Willemsz. van</Option>
+                        <Option Value="Claes+Jansz.+Visscher+(II)">V-10 = Visscher, Claes Jansz. (II)</Option>
+                        <Option Value="Hendrik+Voogd">V-11 = Voogd, Hendrik</Option>
                         {/*kunstenaars met de letter W*/}
-                        <option value="Adriaen+van+Wesel">W-1 = Wesel, Adriaen van</option>
+                        <Option Value="Adriaen+van+Wesel">W-1 = Wesel, Adriaen van</Option>
                         {/*kunstenaars met de letter X*/}
-                        <option value="Jan+Baptist+Xavery">X-1 = Xavery, Jan Baptist</option>
+                        <Option Value="Jan+Baptist+Xavery">X-1 = Xavery, Jan Baptist</Option>
                     </select>
                 </div>
                 <div id="search-form2">
                     <h3>Met afbeelding: </h3>
                     <select name="image-only" id="image-only" value={imgOnly}
                             onChange={(event) => setImgOnly(event.target.value)}>
-                        <option value="false">Nee, alles</option>
-                        <option value="true">Ja, alleen met afbeelding</option>
+                        <Option Value="false">Nee, alles</Option>
+                        <Option Value="true">Ja, alleen met afbeelding</Option>
                     </select>
                 </div>
                 <div id="search-form3">
                     <h3>Alleen topstukken: </h3>
                     <select name="top-pieces" id="top-pieces" value={topPieces}
                             onChange={(event) => setTopPieces(event.target.value)}>
-                        <option value="false">Nee, alle kunst ook geen topstukken</option>
-                        <option value="true">Ja, alleen topstukken</option>
+                        <Option Value="false">Nee, alle kunst ook geen topstukken</Option>
+                        <Option Value="true">Ja, alleen topstukken</Option>
                     </select>
                 </div>
                 <div id="search-form4">
@@ -226,21 +228,11 @@ const Search = () => {
             />
             </header>
             <main>
-            <ul>
-                {artObjects.length > 0 && artObjects.map((artObject) => {
-                    return <div className="art-container">
-                    <ul key={artObject.objectNumber} className="art-body">
-                        <h2><Link to={`/objectInfo/${artObject.objectNumber}`}>{artObject.title}</Link></h2>
-                        <p>{artObject.objectNumber}</p>
-                        <h3>image:</h3>
-                        {artObject.webImage !== null ?
-                            <img src={artObject.webImage.url} alt="art-image" width="300px"/> : ''}
-                    </ul>
-                    </div>
-                })}
-            </ul>
+                <div className="artPiece">
+                <ArtPiece artObjects={artObjects}/>
+                </div>
             </main>
-            <footer>
+            <Footer>
             <p>paginanr. = {pageNumber}  </p>
             <Button
                 onClick={prevPage}
@@ -252,7 +244,7 @@ const Search = () => {
                 disabled={pageNumber > 99}
                 title="Volgende pagina"
             />
-            </footer>
+            </Footer>
         </div>
     );
 };

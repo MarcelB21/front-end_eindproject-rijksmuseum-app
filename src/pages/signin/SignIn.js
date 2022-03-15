@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import {Link, useHistory} from 'react-router-dom';
 import {AuthContext} from "../../context/AuthContext";
 import axios from "axios";
-
+import './SignIn.css'
 
 function SignIn() {
     const { login } = useContext(AuthContext);
@@ -31,8 +31,9 @@ function SignIn() {
 
     return (
         <>
-            <h1>Inloggen</h1>
-            <p>Welkom bij de website van het Rijksmuseum gemaakt door <strong>Marcel Brzezinski</strong> als eindopdracht van <strong>Novi Hoegeschool te Utrecht</strong>!</p>
+            <div className="signin">
+            <h1 className="h1">Inloggen</h1>
+            <p>Welkom bij de website van het Rijksmuseum gemaakt door <strong>Marcel Brzezinski</strong> als eindopdracht van <strong>Novi Hogeschool te Utrecht</strong>!</p>
 
             <form onSubmit={handleSubmit}>
                 <label htmlFor="user">
@@ -61,9 +62,8 @@ function SignIn() {
                 </button>
             </form>
 
-            <p>Heb je nog geen account? <Link to="/signup">Registreer</Link> je dan eerst.</p>
-
-            <footer></footer>
+            <p>Heb je nog geen account? <Link className="register" to="/signup">Registreer</Link> je dan eerst.</p>
+            </div>
         </>
     );
 }
