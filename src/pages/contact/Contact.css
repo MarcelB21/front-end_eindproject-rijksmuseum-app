@@ -1,11 +1,16 @@
 div {
-    background-color: #f6efd9;
+    background-color: #031023;
     border: none;
+    color:white;
+}
+
+h3 {
+    background-color: #031023;
 }
 
 footer {
     position: -ms-device-fixed;
-    background-color: #f6efd9;
+    background-color: #031023;
     bottom: 0;
     min-height: 54vh;
 }

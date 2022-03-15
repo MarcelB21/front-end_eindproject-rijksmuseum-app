@@ -4,20 +4,21 @@ import axios from "axios";
 import {Link, useHistory} from "react-router-dom";
 import Button from "../../compontents/button/Button";
 import './Home.css'
+import ArtPiece from "../../compontents/artpiece/ArtPiece";
 
 
 const Home = () => {
 
-    const [art, setArt] = useState('');
+    const [artObjects, toggleArtObjects] = useState([]);
     
     const apiKey = 'IofFTSpv';
 
-    let [pageSize, setPageSize] = useState(10);
-    let handleIncrease = (event) => {
+    const [pageSize, setPageSize] = useState(10);
+    const handleIncrease = (event) => {
         setPageSize(pageSize+10);
         event.preventDefault();
     }
-    let handleDecrease = (event) => {
+    const handleDecrease = (event) => {
         setPageSize(pageSize-10);
         event.preventDefault();
     }
@@ -35,7 +36,8 @@ const Home = () => {
         async function fetchData() {
             try {
                 const result = await axios.get(`https://www.rijksmuseum.nl/api/nl/collection?key=${apiKey}&involvedMaker=Rembrandt+van+Rijn&p=${pageNumber}&ps=${pageSize}`);
-                setArt(result.data.artObjects);
+                toggleArtObjects(result.data.artObjects);
+                console.log(result.data.artObjects)
             } catch (e) {
                 console.error(e);
             }
@@ -63,22 +65,9 @@ const Home = () => {
                     />
             </header>
             <main>
-            {art && art.map((art, index)=>{
-                return (
-                    <Fragment key={index}>
-                        <div className="art-container">
-                            <ul className="art-body">
-                                <h2>Title:</h2>
-                                <h2><Link to={`/objectInfo/${art.objectNumber}`}>{art.title}</Link></h2>
-                                <h3>image:</h3>
-                                {art.webImage !== null? <img src={art.webImage.url} alt="art-image" width="250px"/> : ''}
-                                <h4>ID: </h4>
-                                <p>{art.id}</p>
-                            </ul>
-                        </div>
-                    </Fragment>
-                )
-            })}
+                <div className="ärtPiece">
+                <ArtPiece artObjects={artObjects}/>
+                </div>
             </main>
             <footer id="footer" className="pageNumber">
                 <p>paginanr. = {pageNumber}  </p>

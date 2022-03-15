@@ -1,11 +1,11 @@
 import './Footer.css'
 
-function Footer(children) {
+function Footer({children}) {
 
 return (
-    <>
-    <footer>(children)</footer>
-    </>
+    <div className="footer">
+    <footer>{children}</footer>
+    </div>
 );
 }
 

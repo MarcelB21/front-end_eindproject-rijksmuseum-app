@@ -3,13 +3,32 @@
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    background-color: #f6efd9;
+    background-color: #0A1E3A;
+    margin-left: 37%;
+    margin-color: #0A1E3A;
 }
-h1 {
-    background-color: #f6efd9;
+h3 {
+    background-color: #0A1E3A;
     margin: 0;
 }
+h4 {
+    background-color: #0A1E3A;
+    margin: 0;
+}
+
+h1 {
+    background-color:  #031023;
+    color: white;
+    margin: 0;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+}
 #search-form1 {
+    justify-content: center;
+}
+#search-form4 {
+    display: flex;
     justify-content: center;
 }
 .art-container {
@@ -52,6 +71,7 @@ footer {
     padding: 10px 10px 0px 10px;
     margin-top: auto;
     z-index:1;
+    background-color: #031023;
 }
 
 header {

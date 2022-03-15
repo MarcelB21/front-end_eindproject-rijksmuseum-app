@@ -25,6 +25,7 @@ nav a:active {
 .logo-container img {
     width: 125px;
     margin-right: 8px;
+    border-color: #0A1E3A;
 }
 
 .basic {

@@ -42,7 +42,7 @@ function App() {
               <Contact />
           </Route>
       </Switch>
-        <Footer></Footer>
+            <Footer />
     </div>
   );
 }
