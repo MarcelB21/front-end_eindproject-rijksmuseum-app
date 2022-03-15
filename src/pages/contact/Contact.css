@@ -4,8 +4,11 @@ div {
     color:white;
 }
 
-h3 {
+h3,
+p,
+li {
     background-color: #031023;
+    padding-left: 15px;
 }
 
 footer {
