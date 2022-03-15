@@ -19,9 +19,9 @@ function NavBar() {
             </Link>
             {auth?
                 <div className="basic1">
-                    <Link to="/">kunstcollectie</Link>
-                    <Link to="/search">zoekpagina</Link>
-                    <Link to="/profile">profielpagina</Link>
+                    <Link className="link" to="/">kunstcollectie</Link>
+                    <Link className="link" to="/search">zoekpagina</Link>
+                    <Link className="link" to="/profile">profielpagina</Link>
                     <button
                         type="button"
                         onClick={logout}
@@ -30,8 +30,8 @@ function NavBar() {
                 </div>
                 :
                 <div className="basic">
-                    <Link to="/signin">Log in</Link>
-                    <Link to="/signup">Registreren</Link>
+                    <Link className="link" to="/signin">Log in</Link>
+                    <Link className="link" to="/signup">Registreren</Link>
                 </div>}
         </nav>
     );

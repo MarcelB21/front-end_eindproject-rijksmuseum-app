@@ -43,3 +43,7 @@ nav a:active {
     justify-content:space-evenly;
     gap: 25px;
 }
+
+.link:hover {
+    color: yellowgreen;
+}
