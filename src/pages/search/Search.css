@@ -36,12 +36,14 @@ h1 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 1vh 1vh;
-    height: 750px;
-    width: 23%;
+    height: 1000px;
+    width: 18%;
     float: left;
 }
-
+p {
+    color:black;
+    background-color: white;
+}
 
 ul {
     padding-left: 20px;
