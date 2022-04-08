@@ -33,17 +33,19 @@ function Profile() {
             <h1 className="h1">Profielpagina</h1>
             <section className="section1">
                 <h2 className="h2">Gegevens</h2>
-                <p><strong>Gebruikersnaam:</strong> {user.username}</p>
-                <p><strong>Email:</strong> {user.email}</p>
-                <p><strong>id:</strong>{user.id}</p>
-                <p><strong>roles:</strong>{user.role}</p>
+                <h3><strong>Gebruikersnaam:</strong></h3>
+                <h3>{user.username}</h3>
+                <h3><strong>Email:</strong></h3>
+                <h3>{user.email}</h3>
+                <h3><strong>id:</strong>{user.id}</h3>
+                <h3><strong>roles:</strong>{user.role}</h3>
             </section>
             <section className="section2">
                 <h2>Strikt geheime profiel-content</h2>
-                <p>Je kunt op deze webpagina twee kanten op:</p>
+                <h3>Je kunt op deze webpagina twee kanten op:</h3>
                 <ul>
-                    <li>je kunt naar de kunst-collectie gaan en daar kunst bekijken, houdt er rekening mee dat je max 100 pagina's kunt bekijken en er maximaal 100 kunstobjecten per pagina zijn: <p>Link naar de <Link className="Link" to="/">Kunst-collectie</Link></p></li>
-                    <li>je kunt naar de zoekpagina gaan en daar per kunstenaar bekijken wat de kunstenaar gemaakt heeft. Je hebt hetzelfde limit aan kunstobjecten als bij de kunst-collectie. Tevens is het zo dat als je kijkt naar de zoekfunctie op kunstenaar dat je een letter met cijfer ziet, dit is gedaan voor de gebruikersvriendelijkheid want ipv de kunstenaar te onthouden, hoef je nu alleen maar één letter en een (of twee) cijfer(s) te onthouden! <p>Link naar de <Link className="Link" to="/search">Zoekpagina</Link></p></li>
+                    <li>je kunt naar de kunst-collectie gaan en daar kunst bekijken, houdt er rekening mee dat je max 100 pagina's kunt bekijken en er maximaal 100 kunstobjecten per pagina zijn: <h3>Link naar de <Link className="Link" to="/">Kunst-collectie</Link></h3></li>
+                    <li>je kunt naar de zoekpagina gaan en daar per kunstenaar bekijken wat de kunstenaar gemaakt heeft. Je hebt hetzelfde limit aan kunstobjecten als bij de kunst-collectie. Tevens is het zo dat als je kijkt naar de zoekfunctie op kunstenaar dat je een letter met cijfer ziet, dit is gedaan voor de gebruikersvriendelijkheid want ipv de kunstenaar te onthouden, hoef je nu alleen maar één letter en een (of twee) cijfer(s) te onthouden! <h3>Link naar de <Link className="Link" to="/search">Zoekpagina</Link></h3></li>
                 </ul>
             </section>
         </div>

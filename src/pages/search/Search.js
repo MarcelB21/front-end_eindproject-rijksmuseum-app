@@ -1,10 +1,10 @@
 import './Search.css';
 import React, {useEffect, useState} from "react";
 import axios from "axios";
-import Button from "../../compontents/button/Button";
-import Option from "../../compontents/option/Option";
+import Button from "../../components/button/Button";
+import Option from "../../components/option/Option";
 import Footer from "../../context/Footer";
-import ArtPiece from "../../compontents/artpiece/ArtPiece";
+import ArtPiece from "../../components/artpiece/ArtPiece";
 
 const apiKey = 'IofFTSpv';
 
@@ -41,6 +41,7 @@ const Search = () => {
         try {
             const result = await axios.get(`https://www.rijksmuseum.nl/api/nl/collection?key=${apiKey}&p=&involvedMaker=${involvedMaker}&imgOnly=${imgOnly}&topPieces=${topPieces}`);
             toggleArtObjects(result.data.artObjects);
+            console.log(result);
         } catch (e) {
             console.error(e);
         }
@@ -215,7 +216,7 @@ const Search = () => {
                 </div>
             </form>
             <header>
-            <p>{pageSize} kunstobjecten op de pagina</p>
+            <h3>{pageSize} kunstobjecten op de pagina</h3>
             <Button
                 onClick={handleDecrease}
                 disabled={pageSize < 11}
@@ -233,7 +234,7 @@ const Search = () => {
                 </div>
             </main>
             <Footer>
-            <p>paginanr. = {pageNumber}  </p>
+            <h4>paginanr. = {pageNumber}  </h4>
             <Button
                 onClick={prevPage}
                 disabled={pageNumber < 2}

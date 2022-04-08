@@ -7,6 +7,11 @@
     background-color: #031023;
 }
 
+p {
+    color:black;
+    background-color: white;
+}
+
 .section1 {
     display: flex;
     flex-direction: column;

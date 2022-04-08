@@ -2,7 +2,7 @@ import './ObjectInfo.css';
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import {useParams} from "react-router-dom";
-import ArtObject from "../../compontents/artobject/ArtObject";
+import ArtObject from "../../components/artobject/ArtObject";
 
 const ObjectInfo = () => {
 

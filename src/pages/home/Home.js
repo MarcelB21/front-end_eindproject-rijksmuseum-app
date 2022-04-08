@@ -2,9 +2,9 @@ import './Home.css';
 import React, {Fragment, useEffect, useState} from "react";
 import axios from "axios";
 import {Link, useHistory} from "react-router-dom";
-import Button from "../../compontents/button/Button";
+import Button from "../../components/button/Button";
 import './Home.css'
-import ArtPiece from "../../compontents/artpiece/ArtPiece";
+import ArtPiece from "../../components/artpiece/ArtPiece";
 
 
 const Home = () => {
@@ -52,7 +52,7 @@ const Home = () => {
         <div>
             <Fragment>
             <header id="header" className="pageSize">
-                <p>{pageSize} kunstobjecten op de pagina</p>
+                <h3>{pageSize} kunstobjecten op de pagina</h3>
                     <Button
                         onClick={handleDecrease}
                         disabled={pageSize<11}
@@ -70,7 +70,7 @@ const Home = () => {
                 </div>
             </main>
             <footer id="footer" className="pageNumber">
-                <p>paginanr. = {pageNumber}  </p>
+                <h4>paginanr. = {pageNumber}  </h4>
                     <Button
                         onClick={prevPage}
                         disabled={pageNumber<2}

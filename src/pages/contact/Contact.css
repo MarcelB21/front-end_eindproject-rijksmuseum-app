@@ -5,9 +5,10 @@ div {
 }
 
 h3,
-p,
+h4,
 li {
     background-color: #031023;
+    color: white;
     padding-left: 15px;
 }
 
