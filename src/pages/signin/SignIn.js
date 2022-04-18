@@ -33,7 +33,7 @@ function SignIn() {
         <>
             <div className="signin">
             <h1 className="h1">Inloggen</h1>
-            <p>Welkom bij de website van het Rijksmuseum gemaakt door <strong>Marcel Brzezinski</strong> als eindopdracht van <strong>Novi Hogeschool te Utrecht</strong>!</p>
+            <h4>Welkom bij de website van het Rijksmuseum gemaakt door <strong>Marcel Brzezinski</strong> als eindopdracht van <strong>Novi Hogeschool te Utrecht</strong>!</h4>
 
             <form onSubmit={handleSubmit}>
                 <label htmlFor="user">
@@ -62,7 +62,7 @@ function SignIn() {
                 </button>
             </form>
 
-            <p>Heb je nog geen account? <Link className="register" to="/signup">Registreer</Link> je dan eerst.</p>
+            <h2>Heb je nog geen account? <Link className="register" to="/signup">Registreer</Link> je dan eerst.</h2>
             </div>
         </>
     );

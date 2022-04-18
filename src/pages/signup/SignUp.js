@@ -35,7 +35,7 @@ function SignUp() {
     return (
         <div className="signup">
             <h1 className="h1">Registreren</h1>
-            <p>Welkom bij de registratiepagina van het eindproject - Rijksmuseum te Amsterdam</p>
+            <h3>Welkom bij de registratiepagina van het eindproject - Rijksmuseum te Amsterdam</h3>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="email">
                     Emailadress:
@@ -72,7 +72,7 @@ function SignUp() {
                     Registratie
                 </button>
             </form>
-            <p>Heb je al een account? Je kunt je <Link className="login" to="/signin">hier</Link> inloggen.</p>
+            <h4>Heb je al een account? Je kunt je <Link className="login" to="/signin">hier</Link> inloggen.</h4>
         </div>
     );
 }
