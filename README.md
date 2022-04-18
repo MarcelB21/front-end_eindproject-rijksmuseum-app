@@ -1,3 +1,9 @@
+> Dit is een app van het rijksmuseum (te Amsterdam) omdat ik voor school een eindproject moest maken van mijn geleerde kennis.
+> Dit is een frontend (web-)applicatie waarin laat zien dat ik stof beheers van school!
+>> Dit is gemaakt door: Marcel Brzezinski
+
+![Rijksmuseum](src/assets/Rijksmuseum.gif)
+
 # Gebruikers-handleiding van de website van het Rijksmuseum
 ## Benodigdheden
 - Een schone pc;
