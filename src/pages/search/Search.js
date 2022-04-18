@@ -6,7 +6,7 @@ import Option from "../../components/option/Option";
 import Footer from "../../context/Footer";
 import ArtPiece from "../../components/artpiece/ArtPiece";
 
-const apiKey = 'IofFTSpv';
+const apiKey = ;
 
 const Search = () => {
 

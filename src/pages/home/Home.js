@@ -11,7 +11,7 @@ const Home = () => {
 
     const [artObjects, toggleArtObjects] = useState([]);
     
-    const apiKey = 'IofFTSpv';
+    const apiKey = ;
 
     const [pageSize, setPageSize] = useState(10);
     const handleIncrease = (event) => {
