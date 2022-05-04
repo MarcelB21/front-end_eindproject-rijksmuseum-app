@@ -13,7 +13,7 @@ const ObjectInfo = () => {
     const [artName, setArtName] = useState([]);
     const [artImage, toggleArtImage] = useState([]);
     const [artDescription, setArtDescription] = useState([]);
-    const apiKey = '';
+    const apiKey = ;
     const {id} = useParams();
 
     useEffect(() => {
