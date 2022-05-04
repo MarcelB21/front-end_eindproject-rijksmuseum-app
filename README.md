@@ -46,8 +46,7 @@ Creëert met een map met een productie bouw van deze website.
 
 2. NPM test:
 
-Met onderstaande commando, test of je alles ontvangt van de website.
-Elke keer als je een webpagina aanpast in de bron, slaat het de wijzigingen op!
+Draait alle unit testen van het project.
 ### `npm test`
 
 -----------
