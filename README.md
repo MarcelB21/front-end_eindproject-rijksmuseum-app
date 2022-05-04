@@ -13,8 +13,8 @@
 
 ## Handleiding
 
-- Stap 1: Kopieer de code door naar de code te gaan op GitHub;
-- Stap 2: Plak de code in Version Control van je IDE;
+- Stap 1: Kopieer de Github-repository link door naar de code te gaan op GitHub;
+- Stap 2: Clone de code in Version Control van je IDE;
 - Stap 3: Download de website naar je PC in je IDE;
 - Stap 4: Plak de APIkey in de volgende regel: "const apiKey = "
 Plak het tussen de aanhalingstekens, bij de volgende bestanden:
@@ -31,6 +31,27 @@ Plak het tussen de aanhalingstekens, bij de volgende bestanden:
 - Stap 8: Ga nu naar de inlog-pagina en geef je gebruikersnaam en wachtwoord op, om in de website te komen.
 
 Klaar, je kunt nu gebruik maken van de website!
+
+- Stap 9: Om te stoppen doe je: 
+### `CTRL + C`
+
+----
+## Extra opties
+
+1. NPM build
+
+Creëert met een map met een productie bouw van deze website.
+
+### `npm build`
+
+2. NPM test:
+
+Met onderstaande commando, test of je alles ontvangt van de website.
+Elke keer als je een webpagina aanpast in de bron, slaat het de wijzigingen op!
+### `npm test`
+
+-----------
+-----------
 
 # Accounts
 Er is geen standaard account waar je gebruik van kan maken, je dient jezelf eerst te registreren en daarna aan te melden voor de website.
